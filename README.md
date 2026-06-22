@@ -1,41 +1,27 @@
-# Vanya Landing
+# vanyaproai
 
-Готовая GitHub Pages версия сайта.
+Personal website about AI products, MVPs, product experiments and fast launches.
 
-## Что внутри
+## Live site
 
-- `index.html` — главная страница сайта
-- `404.html` — страница ошибки
-- `.nojekyll` — отключает обработку Jekyll на GitHub Pages
-- `DEPLOY.md` — инструкция по публикации
-- `SITE_README.md` — исходный README из архива, если он был
+https://chmutovia-jpg.github.io/vanyaproaisite/
 
-## Деплой на GitHub Pages
+## About
 
-1. Создай новый репозиторий на GitHub.
-2. Загрузи все файлы из этой папки в корень репозитория.
-3. Открой `Settings → Pages`.
-4. Выбери:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/ (root)`
-5. Нажми `Save`.
-6. Подожди несколько минут.
+I build small AI-first digital products: landing pages, MVPs, AI tools, automations and product prototypes.
 
-Обычный адрес будет таким:
+The site includes:
 
-```txt
-https://ТВОЙ-НИК.github.io/НАЗВАНИЕ-РЕПОЗИТОРИЯ/
-```
+* personal positioning;
+* selected projects;
+* AI engineering knowledge;
+* product approach;
+* contact links.
 
-Чтобы получить адрес без названия репозитория, создай репозиторий с названием:
+## Stack
 
-```txt
-ТВОЙ-НИК.github.io
-```
+HTML, CSS, JavaScript.
 
-Тогда сайт будет открываться по адресу:
+## Contact
 
-```txt
-https://ТВОЙ-НИК.github.io/
-```
+Telegram: https://t.me/vanyaproai
