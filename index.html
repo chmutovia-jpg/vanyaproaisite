@@ -2505,6 +2505,421 @@
     }
 
 
+
+    /* =========================
+       PREMIUM CLEAN PATCH
+       ========================= */
+
+    .editorial-label {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding-top: 132px;
+      padding-bottom: 132px;
+    }
+
+    .hero h1 {
+      max-width: 940px;
+      font-size: clamp(54px, 8.1vw, 112px);
+      line-height: 0.92;
+      letter-spacing: -0.095em;
+    }
+
+    .hero-lead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(18px, 1.9vw, 22px);
+    }
+
+    .section-top {
+      max-width: 1040px;
+      display: block;
+    }
+
+    .section-top h2 {
+      margin-top: 0;
+    }
+
+    .premium-positioning {
+      padding-top: 92px;
+    }
+
+    .positioning-grid,
+    .deliverables-grid,
+    .premium-use-grid,
+    .background-grid,
+    .contact-scenarios {
+      display: grid;
+      gap: 14px;
+    }
+
+    .positioning-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .deliverables-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .premium-use-grid {
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+    }
+
+    .background-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .contact-scenarios {
+      max-width: 980px;
+      margin: 32px auto 0;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .positioning-card,
+    .deliverable-card,
+    .premium-use-card,
+    .background-card,
+    .contact-scenarios div,
+    .clean-proof-card {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .positioning-card:hover,
+    .deliverable-card:hover,
+    .premium-use-card:hover,
+    .background-card:hover,
+    .clean-proof-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.94);
+      border-color: rgba(7, 92, 255, 0.24);
+      box-shadow: 0 34px 100px rgba(7, 92, 255, 0.10);
+    }
+
+    .positioning-card,
+    .deliverable-card,
+    .background-card {
+      min-height: 310px;
+      padding: 26px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .positioning-card span,
+    .deliverable-card span,
+    .use-index {
+      color: var(--accent);
+      font-weight: 850;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .positioning-card h3,
+    .deliverable-card h3,
+    .premium-use-card h3,
+    .background-card h3 {
+      margin: auto 0 12px;
+      font-size: 30px;
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+    }
+
+    .positioning-card p,
+    .deliverable-card p,
+    .premium-use-card p,
+    .background-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.42;
+    }
+
+    .premium-use-card {
+      min-height: 430px;
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .premium-use-card.primary {
+      grid-column: span 1;
+      background:
+        radial-gradient(circle at 16% 10%, rgba(7, 92, 255, 0.13), transparent 18rem),
+        radial-gradient(circle at 84% 10%, rgba(187, 255, 95, 0.42), transparent 17rem),
+        rgba(255, 255, 255, 0.78);
+    }
+
+    .premium-use-card ul {
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .premium-use-card li,
+    .background-tags span,
+    .proof-facts span {
+      min-height: 34px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(245, 243, 238, 0.9);
+      display: inline-flex;
+      align-items: center;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .clean-proof-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+    }
+
+    .clean-proof-card {
+      min-height: 540px;
+      padding: 26px;
+      border-radius: var(--radius-xl);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .clean-proof-card.main {
+      grid-row: span 2;
+      min-height: 820px;
+    }
+
+    .proof-visual {
+      min-height: 260px;
+      margin-bottom: 28px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 82% 12%, rgba(7, 92, 255, 0.14), transparent 16rem),
+        rgba(245, 243, 238, 0.86);
+      overflow: hidden;
+    }
+
+    .proof-visual.browser {
+      min-height: 360px;
+      padding: 18px;
+    }
+
+    .browser-head {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .browser-head span {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(16, 16, 16, 0.22);
+    }
+
+    .browser-head strong {
+      margin-left: 8px;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .proof-flow {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .proof-flow div {
+      min-height: 72px;
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      display: flex;
+      align-items: center;
+      color: var(--ink);
+      font-weight: 850;
+      letter-spacing: -0.03em;
+    }
+
+    .proof-visual.mobile,
+    .proof-visual.planner {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .mobile-notch {
+      width: 72px;
+      height: 8px;
+      margin: 0 auto auto;
+      border-radius: 999px;
+      background: rgba(16, 16, 16, 0.18);
+    }
+
+    .proof-visual.mobile strong,
+    .proof-visual.planner strong {
+      font-size: 30px;
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+
+    .proof-visual.mobile p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .proof-visual.planner div {
+      height: 14px;
+      margin-bottom: 10px;
+      border-radius: 999px;
+      background: rgba(16, 16, 16, 0.10);
+    }
+
+    .proof-visual.planner div:first-child {
+      width: 54%;
+      background: rgba(7, 92, 255, 0.36);
+    }
+
+    .proof-visual.planner div:nth-child(2) {
+      width: 78%;
+    }
+
+    .proof-visual.planner div:nth-child(3) {
+      width: 42%;
+      margin-bottom: 28px;
+    }
+
+    .proof-copy h3 {
+      margin: auto 0 12px;
+      font-size: clamp(34px, 4.3vw, 60px);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+    }
+
+    .proof-copy p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.42;
+    }
+
+    .proof-facts,
+    .background-tags {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .background-card {
+      min-height: 290px;
+    }
+
+    .final-cta {
+      margin-top: 30px;
+    }
+
+    .contact-scenarios div {
+      min-height: 150px;
+      padding: 18px;
+      border-radius: 26px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .contact-scenarios strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .contact-scenarios span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    @media (max-width: 980px) {
+      .positioning-grid,
+      .deliverables-grid,
+      .premium-use-grid,
+      .clean-proof-grid,
+      .background-grid,
+      .contact-scenarios {
+        grid-template-columns: 1fr;
+      }
+
+      .clean-proof-card.main {
+        grid-row: auto;
+        min-height: auto;
+      }
+
+      .clean-proof-card,
+      .premium-use-card,
+      .positioning-card,
+      .deliverable-card,
+      .background-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .section {
+        padding-top: 76px;
+        padding-bottom: 76px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 12.6vw, 56px);
+      }
+
+      .positioning-card,
+      .deliverable-card,
+      .premium-use-card,
+      .clean-proof-card,
+      .background-card {
+        padding: 22px;
+        border-radius: 30px;
+      }
+
+      .proof-visual.browser,
+      .proof-visual.mobile,
+      .proof-visual.planner {
+        min-height: 240px;
+      }
+
+      .proof-copy h3 {
+        font-size: 38px;
+      }
+    }
+
+
     @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
@@ -2592,13 +3007,12 @@
           <span>открыт к проектам: лендинги, MVP, AI-автоматизации</span>
         </div>
 
-        <h1>Собираю AI-продукты быстрее, чем большинство успевает написать ТЗ.</h1>
+        <h1>AI Product Builder для быстрых запусков</h1>
 
         <p class="hero-lead">
-          Я Ваня. Придумываю, проектирую и запускаю небольшие цифровые продукты:
-          от лендингов и MVP до AI-сервисов, автоматизаций и личных проектов.
-          Без раздутой команды, бесконечных созвонов и ощущения, что запуск опять где-то
-          «через пару месяцев».
+          Помогаю фаундерам, экспертам и малым командам превращать идеи в MVP,
+          лендинги и AI-инструменты — без месяцев подготовки, лишней сложности
+          и “AI ради AI”.
         </p>
 
         <div class="hero-actions">
@@ -2608,7 +3022,7 @@
 
         <div class="final-check-badge">
           <span></span>
-          быстрый запуск · понятная структура · без лишней воды
+          MVP · product thinking · AI engineering
         </div>
 
         <div class="hero-proof">
@@ -2700,225 +3114,150 @@
       </div>
     </section>
 
-    <section class="section manifesto reveal" id="manifest">
-      <div class="editorial-label">манифест</div>
-      <div class="split">
-        <h2>В 2026 году выигрывает не тот, кто дольше готовится. Выигрывает тот, кто быстрее проверяет.</h2>
-        <div class="text-stack">
-          <p>
-            Классический путь часто выглядит так: придумали идею, месяц обсуждали,
-            ещё месяц собирали команду, потом переписали ТЗ и устали до первого запуска.
-          </p>
-          <p>
-            Мой подход проще: найти ядро идеи, собрать первую рабочую версию,
-            показать людям, получить обратную связь и докрутить то, что реально важно.
-          </p>
-        </div>
-      </div>
-    </section>
-
-        <section class="section before-after" id="outcome">
+        <section class="section premium-positioning" id="manifest">
       <div class="section-top reveal">
-        <div class="editorial-label">02 / transformation</div>
-        <h2>С чем приходят и что получают на выходе</h2>
+        <div class="editorial-label">01 / позиционирование</div>
+        <h2>Я работаю на стыке продукта, AI и запуска</h2>
       </div>
 
-      <div class="before-after-grid">
-        <article class="ba-card before reveal">
-          <h3>Приходят с хаосом</h3>
-          <ul>
-            <li>идея лежит в заметках, но непонятно, с чего начать;</li>
-            <li>оффер звучит размыто и не цепляет;</li>
-            <li>хочется “AI-фичу”, но непонятно, где от неё польза;</li>
-            <li>есть продукт, но люди не понимают ценность;</li>
-            <li>слишком много вариантов и нет первого шага.</li>
-          </ul>
+      <div class="positioning-grid">
+        <article class="positioning-card reveal">
+          <span>product</span>
+          <h3>Сначала ценность</h3>
+          <p>
+            Помогаю сформулировать, кому нужен продукт, какую боль он закрывает,
+            как звучит оффер и какой первый шаг должен сделать пользователь.
+          </p>
         </article>
 
-        <article class="ba-card after reveal">
-          <h3>Получают систему</h3>
-          <ul>
-            <li>понятный первый экран и сильный оффер;</li>
-            <li>структуру MVP без лишних функций;</li>
-            <li>AI-логику там, где она реально усиливает продукт;</li>
-            <li>лендинг или прототип, который можно показать людям;</li>
-            <li>список следующих шагов после первого фидбека.</li>
-          </ul>
+        <article class="positioning-card reveal">
+          <span>AI</span>
+          <h3>Потом усиление</h3>
+          <p>
+            AI появляется не ради модного слова, а там, где он реально ускоряет,
+            объясняет, анализирует, автоматизирует или создаёт новый пользовательский опыт.
+          </p>
+        </article>
+
+        <article class="positioning-card reveal">
+          <span>launch</span>
+          <h3>Затем проверка</h3>
+          <p>
+            Первая версия должна быстро попасть к людям: лендинг, прототип,
+            MVP, demo-flow или закрытая beta. Дальше — улучшения по фактам.
+          </p>
         </article>
       </div>
     </section>
 
 
-<section class="section principles">
+    <section class="section deliverables" id="process">
       <div class="section-top reveal">
-        <div class="editorial-label">принципы</div>
-        <h2>Как я работаю</h2>
+        <div class="editorial-label">02 / первый спринт</div>
+        <h2>Что можно получить на выходе</h2>
       </div>
 
-      <div class="principles-grid">
-        <article class="principle-card reveal">
+      <div class="deliverables-grid">
+        <article class="deliverable-card reveal">
           <span>01</span>
-          <h3>Сначала смысл, потом код</h3>
-          <p>Не начинаю с кнопок. Сначала разбираю, зачем продукт нужен, кому он нужен и какое действие должен вызвать.</p>
+          <h3>Product structure</h3>
+          <p>Кому продукт нужен, какую боль закрывает, какой первый сценарий запускаем и что не делаем в первой версии.</p>
         </article>
 
-        <article class="principle-card reveal">
+        <article class="deliverable-card reveal">
           <span>02</span>
-          <h3>Минимум лишнего</h3>
-          <p>Если можно запустить проще — запускаем проще. Сложность должна появляться только там, где она даёт результат.</p>
+          <h3>Offer & landing logic</h3>
+          <p>Первый экран, структура лендинга, CTA, блоки доверия и логика страницы, которая объясняет ценность.</p>
         </article>
 
-        <article class="principle-card reveal">
+        <article class="deliverable-card reveal">
           <span>03</span>
-          <h3>AI как ускоритель</h3>
-          <p>Нейросети помогают быстрее писать, проверять, улучшать и тестировать идеи. Но решение всё равно принимает человек.</p>
+          <h3>MVP scope</h3>
+          <p>Минимальная версия продукта без лишних функций: что собрать первым, чтобы проверить идею на людях.</p>
         </article>
 
-        <article class="principle-card reveal">
+        <article class="deliverable-card reveal">
           <span>04</span>
-          <h3>Живой фидбек важнее фантазий</h3>
-          <p>Лучший способ понять продукт — не спорить в голове, а показать людям и посмотреть, где им реально ценно.</p>
+          <h3>AI feature concept</h3>
+          <p>Где AI реально полезен: анализ, генерация, агент, RAG, автоматизация, внутренний помощник или user-facing фича.</p>
         </article>
 
-        <article class="principle-card reveal wide">
+        <article class="deliverable-card reveal">
           <span>05</span>
-          <h3>Запуск — это не финал, а начало</h3>
-          <p>Первая версия почти всегда кривая. Нормально. Главное — быстро увидеть слабые места и превратить их в план улучшений.</p>
+          <h3>UX / product review</h3>
+          <p>Разбор слабых мест: оффер, сценарий, онбординг, перегруз интерфейса, точки трения и недостающие блоки.</p>
+        </article>
+
+        <article class="deliverable-card reveal">
+          <span>06</span>
+          <h3>Next-step roadmap</h3>
+          <p>Понятный список следующих действий после первого запуска, фидбека или beta-теста.</p>
         </article>
       </div>
     </section>
 
-
-    <section class="section process" id="process">
-      <div class="section-top reveal">
-        <div class="editorial-label">процесс</div>
-        <h2>От идеи до первой живой версии</h2>
-      </div>
-
-      <div class="process-board">
-        <article class="process-step reveal">
-          <div class="step-number">01</div>
-          <h3>Разобрать идею</h3>
-          <p>
-            Убираю шум: кто пользователь, какая боль, какое действие нужно получить
-            и почему человеку вообще должно быть не всё равно.
-          </p>
-        </article>
-
-        <article class="process-step reveal">
-          <div class="step-number">02</div>
-          <h3>Собрать каркас</h3>
-          <p>
-            Делаю структуру, тексты, пользовательский путь, первый экран, CTA
-            и понятный сценарий использования.
-          </p>
-        </article>
-
-        <article class="process-step reveal">
-          <div class="step-number">03</div>
-          <h3>Запустить MVP</h3>
-          <p>
-            Быстро собираю рабочую версию: лендинг, AI-сервис, прототип,
-            внутренний инструмент или демо для первых пользователей.
-          </p>
-        </article>
-
-        <article class="process-step reveal">
-          <div class="step-number">04</div>
-          <h3>Улучшить по фактам</h3>
-          <p>
-            Смотрю на реакцию, слабые места и обратную связь. Дальше — не фантазии,
-            а конкретный список улучшений.
-          </p>
-        </article>
-      </div>
-    </section>
 
     <section class="section services" id="services">
       <div class="section-top reveal">
-        <div class="editorial-label">03 / где я полезен</div>
-        <h2>Не просто “делаю сайты”. Помогаю людям запускать, упаковывать и усиливать идеи через AI</h2>
+        <div class="editorial-label">03 / где полезен</div>
+        <h2>Четыре сценария, где я могу быстро дать результат</h2>
       </div>
 
-      <div class="usecase-bento">
-        <article class="usecase-bento-card large reveal">
-          <div class="usecase-topline">фаундерам · MVP · проверка гипотез</div>
-          <h3>Проверить идею до того, как в неё уйдут месяцы</h3>
+      <div class="premium-use-grid">
+        <article class="premium-use-card primary reveal">
+          <div class="use-index">01</div>
+          <h3>Запуск новой идеи</h3>
           <p>
-            Помогаю быстро превратить сырую задумку в понятный оффер, первый экран,
-            MVP-структуру, пользовательский путь и версию, которую можно показать реальным людям.
+            Для фаундеров и новых проектов: быстро превратить идею в понятный MVP,
+            лендинг, демо-сценарий или первую beta-версию.
           </p>
-          <div class="mini-tags">
-            <span>product hypothesis</span>
-            <span>MVP scope</span>
-            <span>landing structure</span>
-          </div>
+          <ul>
+            <li>идея → структура</li>
+            <li>структура → MVP</li>
+            <li>MVP → первый фидбек</li>
+          </ul>
         </article>
 
-        <article class="usecase-bento-card reveal">
-          <div class="usecase-topline">экспертам · авторам</div>
-          <h3>Упаковать личный бренд без инфоцыганского вайба</h3>
+        <article class="premium-use-card reveal">
+          <div class="use-index">02</div>
+          <h3>Упаковка экспертизы</h3>
           <p>
-            Помогаю объяснить, кто ты, чем полезен, почему тебе можно доверять
-            и какое действие должен сделать человек после знакомства с тобой.
+            Для экспертов, авторов и личных брендов: собрать страницу, которая спокойно
+            объясняет ценность, доверие и следующий шаг.
           </p>
-          <div class="mini-tags">
-            <span>personal website</span>
-            <span>trust blocks</span>
-          </div>
+          <ul>
+            <li>personal website</li>
+            <li>offer</li>
+            <li>trust blocks</li>
+          </ul>
         </article>
 
-        <article class="usecase-bento-card reveal">
-          <div class="usecase-topline">малому бизнесу</div>
-          <h3>Найти, где AI реально экономит время</h3>
+        <article class="premium-use-card reveal">
+          <div class="use-index">03</div>
+          <h3>AI для процессов</h3>
           <p>
-            Не “прикрутить нейросеть ради хайпа”, а найти рутину, которую можно ускорить:
-            заявки, ответы, разборы, контент и внутренние помощники.
+            Для бизнеса и команд: найти рутину, которую можно ускорить AI —
+            заявки, ответы, разборы, контент, внутренние помощники.
           </p>
-          <div class="mini-tags">
-            <span>AI assistant</span>
-            <span>workflow automation</span>
-          </div>
+          <ul>
+            <li>AI assistant</li>
+            <li>automation</li>
+            <li>workflow</li>
+          </ul>
         </article>
 
-        <article class="usecase-bento-card reveal">
-          <div class="usecase-topline">продуктовым командам</div>
-          <h3>Понять, где продукт теряет людей</h3>
+        <article class="premium-use-card reveal">
+          <div class="use-index">04</div>
+          <h3>Product / UX review</h3>
           <p>
-            Смотрю на путь пользователя, оффер, онбординг, интерфейс и точки трения.
-            На выходе — список конкретных правок, а не абстрактное “надо улучшить”.
+            Для существующих продуктов: понять, где пользователь теряется,
+            почему оффер не считывается и какие правки дадут быстрый эффект.
           </p>
-          <div class="mini-tags">
-            <span>UX review</span>
-            <span>onboarding audit</span>
-          </div>
-        </article>
-
-        <article class="usecase-bento-card reveal">
-          <div class="usecase-topline">маркетингу</div>
-          <h3>Собрать страницу, которая объясняет ценность</h3>
-          <p>
-            Лендинг не как набор красивых блоков, а как аргумент:
-            боль, решение, доверие, примеры, CTA и понятный следующий шаг.
-          </p>
-          <div class="mini-tags">
-            <span>copy structure</span>
-            <span>conversion logic</span>
-          </div>
-        </article>
-
-        <article class="usecase-bento-card wide reveal">
-          <div class="usecase-topline">новым проектам</div>
-          <h3>Довести идею до первой публичной версии</h3>
-          <p>
-            Могу закрыть путь от “есть мысль в заметках” до первой версии:
-            структура, тексты, дизайн, AI-логика, простая реализация и план улучшений.
-          </p>
-          <div class="mini-tags">
-            <span>idea → prototype</span>
-            <span>prototype → beta</span>
-            <span>beta → feedback</span>
-          </div>
+          <ul>
+            <li>UX audit</li>
+            <li>onboarding</li>
+            <li>AI feature ideas</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -2927,329 +3266,145 @@
     <section class="section work" id="work">
       <div class="section-top reveal">
         <div class="editorial-label">04 / proof</div>
-        <h2>Проекты как доказательство подхода</h2>
+        <h2>Проекты, которые показывают подход</h2>
       </div>
 
-      <div class="proof-grid">
-        <article class="proof-card proof-card-large reveal">
-          <div class="proof-ui">
-            <div class="browser-bar">
+      <div class="clean-proof-grid">
+        <article class="clean-proof-card main reveal">
+          <div class="proof-visual browser">
+            <div class="browser-head">
               <span></span><span></span><span></span>
               <strong>RoastMyApp</strong>
             </div>
-            <div class="mock-analysis">
-              <div>
-                <small>input</small>
-                <p>приложение / лендинг / идея</p>
-              </div>
-              <div>
-                <small>AI review</small>
-                <p>UX · offer · copy · positioning</p>
-              </div>
-              <div>
-                <small>output</small>
-                <p>список конкретных улучшений</p>
-              </div>
+            <div class="proof-flow">
+              <div>input</div>
+              <div>AI review</div>
+              <div>action list</div>
             </div>
           </div>
-          <h3>RoastMyApp — AI-разбор продуктов</h3>
-          <p>
-            Сервис, который помогает быстро увидеть слабые места приложения:
-            UX, оффер, тексты, позиционирование и запуск.
-          </p>
-          <ul class="proof-list">
-            <li>closed beta по invite keys</li>
-            <li>упаковка продукта и пользовательского сценария</li>
-            <li>первый коммерческий интерес / первая продажа</li>
-          </ul>
-        </article>
 
-        <article class="proof-card reveal">
-          <div class="phone-mock">
-            <div class="phone-top"></div>
-            <div class="phone-content">
-              <span>tribe ritual</span>
-              <strong>StreakTogether</strong>
-              <p>habits · tribes · social accountability</p>
+          <div class="proof-copy">
+            <h3>RoastMyApp</h3>
+            <p>AI-сервис для разбора приложений и продуктовых идей.</p>
+            <div class="proof-facts">
+              <span>closed beta</span>
+              <span>invite access</span>
+              <span>первая продажа</span>
+              <span>product review flow</span>
             </div>
           </div>
-          <h3>StreakTogether</h3>
-          <p>
-            Habit-продукт про племена, ритуалы, общий прогресс и дисциплину через связь с людьми.
-          </p>
-          <ul class="proof-list">
-            <li>mobile-first логика</li>
-            <li>ритуалы, стрики, награды</li>
-            <li>социальный слой вместо одиночного трекера</li>
-          </ul>
         </article>
 
-        <article class="proof-card reveal">
-          <div class="planner-mock">
-            <div class="planner-line strong"></div>
-            <div class="planner-line"></div>
-            <div class="planner-line short"></div>
-            <div class="planner-block">AI plan → realistic day</div>
+        <article class="clean-proof-card reveal">
+          <div class="proof-visual mobile">
+            <div class="mobile-notch"></div>
+            <strong>StreakTogether</strong>
+            <p>habits · tribes · rituals</p>
           </div>
-          <h3>DayPilot</h3>
-          <p>
-            AI-планировщик дня, который помогает разложить хаос в понятный и выполнимый план.
-          </p>
-          <ul class="proof-list">
-            <li>AI planner flow</li>
-            <li>закрытие дня и история</li>
-            <li>настройка стиля планирования</li>
-          </ul>
+
+          <div class="proof-copy">
+            <h3>StreakTogether</h3>
+            <p>Mobile habit product про социальную дисциплину, племена и ритуалы.</p>
+            <div class="proof-facts">
+              <span>mobile product</span>
+              <span>tribes</span>
+              <span>ritual loop</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="clean-proof-card reveal">
+          <div class="proof-visual planner">
+            <div></div><div></div><div></div>
+            <strong>AI day plan</strong>
+          </div>
+
+          <div class="proof-copy">
+            <h3>DayPilot</h3>
+            <p>AI-планировщик дня, который превращает хаос задач в реалистичный план.</p>
+            <div class="proof-facts">
+              <span>MVP за неделю</span>
+              <span>AI planner</span>
+              <span>personal use</span>
+            </div>
+          </div>
         </article>
       </div>
     </section>
 
 
-    <section class="section education reveal" id="education">
-      <div class="editorial-label">образование и база</div>
-
-      <div class="education-card">
-        <h2>Учился в ИТМО и проходил курсы University of Helsinki.</h2>
-
-        <div class="education-list">
-          <div>
-            <span>ИТМО</span>
-            <strong>High-Tech Business Management</strong>
-            <p>База про технологический бизнес, продукты, управление и запуск решений.</p>
-          </div>
-
-          <div>
-            <span>University of Helsinki</span>
-            <strong>курсы по технологиям и разработке</strong>
-            <p>Дополнительная база, которая помогает системнее смотреть на разработку и продукт.</p>
-          </div>
-        </div>
+    <section class="section compact-background" id="education">
+      <div class="section-top reveal">
+        <div class="editorial-label">05 / background</div>
+        <h2>База: продукт, AI engineering и запуск</h2>
       </div>
-    </section>
 
-    <section class="section ai-track" id="ai-track">
-      <div class="course-layout">
-        <aside class="course-feature reveal">
-          <div class="editorial-label">мои знания</div>
-          <h2>AI engineering база, которую я уже прошёл и применяю в продуктах.</h2>
-          <p>
-            Это не просто список красивых слов. Моя база закрывает путь от понимания ML-принципов
-            до сборки AI-приложений, агентов, RAG-систем, vector search и облачных AI-решений.
-          </p>
+      <div class="background-grid">
+        <article class="background-card reveal">
+          <h3>Education</h3>
+          <p>ITMO — High-Tech Business Management</p>
+          <p>University of Helsinki — technology courses</p>
+        </article>
 
-          <div class="course-stack">
-            <span>ML fundamentals</span>
-            <span>Python</span>
+        <article class="background-card reveal">
+          <h3>Product</h3>
+          <div class="background-tags">
+            <span>MVP strategy</span>
+            <span>user flow</span>
+            <span>positioning</span>
+            <span>feedback loop</span>
+          </div>
+        </article>
+
+        <article class="background-card reveal">
+          <h3>AI Engineering</h3>
+          <div class="background-tags">
             <span>LLM apps</span>
-            <span>RAG</span>
             <span>AI agents</span>
-            <span>Azure AI</span>
+            <span>RAG</span>
             <span>vector search</span>
+            <span>Azure AI</span>
           </div>
-        </aside>
+        </article>
 
-        <div class="courses-grid">
-          <article class="course-card reveal">
-            <div class="course-meta">
-              <span>AI Engineering</span>
-              <span>applied base</span>
-            </div>
-            <h3>AI Engineering</h3>
-            <p>
-              Понимаю, как устроены прикладные AI-системы: от подготовки данных и выбора подхода
-              до сборки рабочих AI-инструментов под конкретную задачу.
-            </p>
-          </article>
-
-          <article class="course-card reveal">
-            <div class="course-meta">
-              <span>Python</span>
-              <span>AI algorithms</span>
-            </div>
-            <h3>AI with Python</h3>
-            <p>
-              Есть база по search, optimization, classification, machine learning и практическим
-              Python-подходам для задач искусственного интеллекта.
-            </p>
-          </article>
-
-          <article class="course-card reveal">
-            <div class="course-meta">
-              <span>AI Agents</span>
-              <span>tools & workflows</span>
-            </div>
-            <h3>AI-агенты</h3>
-            <p>
-              Разбираюсь в логике AI-агентов: как они используют инструменты, выполняют действия,
-              разбивают задачу на шаги и собираются в рабочие сценарии.
-            </p>
-          </article>
-
-          <article class="course-card reveal">
-            <div class="course-meta">
-              <span>Agentic AI</span>
-              <span>multi-step systems</span>
-            </div>
-            <h3>Agentic workflows</h3>
-            <p>
-              Понимаю, как строить многошаговые AI-процессы: планирование, итерации,
-              проверка результата, повторные действия и управление контекстом.
-            </p>
-          </article>
-
-          <article class="course-card reveal">
-            <div class="course-meta">
-              <span>Machine Learning</span>
-              <span>fundamentals</span>
-            </div>
-            <h3>ML-база</h3>
-            <p>
-              Закрыта основа машинного обучения: признаки, обучение модели, переобучение,
-              оценка качества, базовые типы задач и практическая логика ML-систем.
-            </p>
-          </article>
-
-          <article class="course-card reveal">
-            <div class="course-meta">
-              <span>RAG</span>
-              <span>vector databases</span>
-            </div>
-            <h3>RAG и vector search</h3>
-            <p>
-              Понимаю, как AI-приложения работают с внешними знаниями: embeddings,
-              vector databases, semantic search, hybrid search и RAG-пайплайны.
-            </p>
-          </article>
-
-          <article class="course-card reveal">
-            <div class="course-meta">
-              <span>Azure AI</span>
-              <span>apps & agents</span>
-            </div>
-            <h3>AI apps на Azure</h3>
-            <p>
-              Есть база по проектированию, разработке и деплою AI-приложений и агентов
-              в облачной инфраструктуре Microsoft.
-            </p>
-          </article>
-
-          <article class="course-card reveal">
-            <div class="course-meta">
-              <span>AI Fundamentals</span>
-              <span>CV · NLP · GenAI</span>
-            </div>
-            <h3>AI fundamentals</h3>
-            <p>
-              Закрыта база по AI workloads: computer vision, NLP, generative AI,
-              ML-принципы и понимание того, где какой подход уместен.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section stack" id="stack">
-      <div class="stack-grid">
-        <div class="stack-intro reveal">
-          <div class="editorial-label">стек и подход</div>
-          <h2>Собираю не “красивую картинку”, а понятный продуктовый слой.</h2>
-          <p>
-            Для сайта-визитки этого часто не хватает: показать не только визуал,
-            но и из чего состоит работа — продукт, интерфейс, AI-логика, контент,
-            запуск и обратная связь.
-          </p>
-        </div>
-
-        <div class="stack-panel reveal">
-          <div class="stack-group">
-            <h3>Product</h3>
-            <div class="stack-tags">
-              <span>MVP strategy</span>
-              <span>user flow</span>
-              <span>offer</span>
-              <span>launch plan</span>
-              <span>feedback loop</span>
-            </div>
+        <article class="background-card reveal">
+          <h3>Build & launch</h3>
+          <div class="background-tags">
+            <span>HTML/CSS/JS</span>
+            <span>landing pages</span>
+            <span>micro-animations</span>
+            <span>Threads / Telegram</span>
           </div>
-
-          <div class="stack-group">
-            <h3>AI Engineering</h3>
-            <div class="stack-tags">
-              <span>LLM apps</span>
-              <span>AI agents</span>
-              <span>RAG</span>
-              <span>embeddings</span>
-              <span>vector search</span>
-              <span>prompt systems</span>
-            </div>
-          </div>
-
-          <div class="stack-group">
-            <h3>Web & Design</h3>
-            <div class="stack-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>responsive UI</span>
-              <span>landing pages</span>
-              <span>micro-animations</span>
-            </div>
-          </div>
-
-          <div class="stack-group">
-            <h3>Launch</h3>
-            <div class="stack-tags">
-              <span>Threads</span>
-              <span>Telegram</span>
-              <span>content tests</span>
-              <span>beta access</span>
-              <span>positioning</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-        <section class="section anti-agency" id="anti-agency">
-      <div class="anti-agency-card reveal">
-        <div class="editorial-label">09 / без агентского цирка</div>
-        <h2>Я не продаю процесс ради процесса</h2>
-        <div class="anti-grid">
-          <p>не растягиваю первый запуск на месяцы</p>
-          <p>не начинаю с огромного ТЗ</p>
-          <p>не добавляю AI туда, где он не нужен</p>
-          <p>не делаю дизайн без продуктового смысла</p>
-        </div>
+        </article>
       </div>
     </section>
 
 
 <section class="section final-cta reveal" id="contact">
-      <p class="editorial-label">контакт</p>
-      <h2>Есть идея, которую хочется проверить?</h2>
+      <div class="editorial-label">06 / contact</div>
+      <h2>Напиши, если нужно быстро превратить идею в понятную первую версию</h2>
       <p>
-        Напиши 2–3 предложения: что хочешь запустить, где сейчас затык и какой результат нужен. Я помогу понять, что из этого можно собрать первым.
+        Можно без ТЗ и презентации. Достаточно 2–3 предложений: что хочешь запустить,
+        где сейчас затык и какой результат нужен.
       </p>
 
-      <div class="contact-options">
-        <div class="contact-option">
-          <strong>Идея → структура</strong>
-          <span>Помогу разложить задумку в понятный первый экран, оффер и пользовательский путь.</span>
+      <div class="contact-scenarios">
+        <div>
+          <strong>Есть идея</strong>
+          <span>но непонятно, с чего начать</span>
         </div>
-        <div class="contact-option">
-          <strong>MVP → запуск</strong>
-          <span>Соберём минимальную версию, которую можно показать людям и проверить.</span>
+        <div>
+          <strong>Есть сайт</strong>
+          <span>но он плохо объясняет ценность</span>
         </div>
-        <div class="contact-option">
-          <strong>AI → польза</strong>
-          <span>Подумаем, где AI реально усиливает продукт, а где он просто лишний шум.</span>
+        <div>
+          <strong>Есть продукт</strong>
+          <span>но нужен честный product / UX review</span>
         </div>
-      </div>
-
-      <div class="cta-send-list">
-        <span>можно прислать:</span>
-        <p>идею продукта · ссылку на сайт · скрин приложения · описание бизнеса · процесс, который хочется автоматизировать</p>
+        <div>
+          <strong>Есть процесс</strong>
+          <span>который хочется ускорить через AI</span>
+        </div>
       </div>
 
       <div class="final-actions">
@@ -3264,6 +3419,7 @@
         </a>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
