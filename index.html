@@ -1380,6 +1380,468 @@
       }
     }
 
+
+    /* =========================
+       FINAL MOBILE RESPONSIVE PATCH
+       ========================= */
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    img,
+    svg {
+      max-width: 100%;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    @media (max-width: 860px) {
+      body::before {
+        background-size: 46px 46px;
+        opacity: 0.28;
+      }
+
+      .site-header {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: none;
+        padding: 12px 14px;
+        gap: 10px;
+      }
+
+      .brand {
+        min-height: 44px;
+        padding: 6px 10px 6px 6px;
+        flex-shrink: 0;
+      }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+      }
+
+      .header-cta {
+        min-height: 44px;
+        padding: 0 14px;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+
+      .nav {
+        display: none !important;
+      }
+
+      .mobile-nav {
+        position: sticky;
+        top: 68px;
+        z-index: 30;
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        padding: 8px 14px 10px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .mobile-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .mobile-nav a {
+        min-height: 36px;
+        padding: 0 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.78);
+        color: var(--muted);
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        font-size: 13px;
+      }
+
+      .hero,
+      .section,
+      .footer {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 36px;
+        padding-bottom: 54px;
+      }
+
+      .eyebrow,
+      .section-kicker,
+      .status-row,
+      .final-check-badge {
+        max-width: 100%;
+        font-size: 13px;
+      }
+
+      .status-row,
+      .final-check-badge {
+        line-height: 1.25;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        max-width: 100%;
+        margin-top: 18px;
+        font-size: clamp(42px, 13vw, 64px);
+        line-height: 0.9;
+        letter-spacing: -0.085em;
+      }
+
+      .hero-lead {
+        max-width: 100%;
+        margin-top: 20px;
+        font-size: 17px;
+        line-height: 1.45;
+      }
+
+      .hero-actions,
+      .final-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .button {
+        width: 100%;
+        min-height: 54px;
+      }
+
+      .hero-proof,
+      .premium-hero-panel,
+      .signal-grid,
+      .process-board,
+      .principles-grid,
+      .work-grid,
+      .education-list,
+      .courses-grid,
+      .stack-grid,
+      .contact-options {
+        grid-template-columns: 1fr !important;
+      }
+
+      .hero-proof {
+        margin-top: 28px;
+        gap: 10px;
+      }
+
+      .hero-proof div {
+        min-height: auto;
+        padding: 16px;
+        border-radius: 20px;
+      }
+
+      .hero-proof strong {
+        font-size: 22px;
+      }
+
+      .hero-visual {
+        order: 2;
+      }
+
+      .photo-card {
+        min-height: auto;
+        padding: 12px;
+        border-radius: 34px;
+      }
+
+      .photo-card::before {
+        inset: 12px;
+        border-radius: 26px;
+      }
+
+      .photo-card img {
+        height: clamp(340px, 92vw, 500px);
+        border-radius: 24px;
+      }
+
+      .floating-note {
+        padding: 9px 11px;
+        font-size: 12px;
+      }
+
+      .note-one {
+        left: 20px;
+        top: 22px;
+      }
+
+      .note-two {
+        right: 20px;
+        bottom: 22px;
+      }
+
+      .orb-one {
+        width: 46px;
+        height: 46px;
+      }
+
+      .ticker-track {
+        padding: 12px 0;
+        animation-duration: 20s;
+      }
+
+      .ticker-track span {
+        font-size: 28px;
+      }
+
+      .section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+      }
+
+      .split,
+      .course-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .split h2,
+      .section-top h2,
+      .education-card h2,
+      .final-cta h2,
+      .stack-intro h2,
+      .course-feature h2 {
+        font-size: clamp(38px, 11vw, 52px);
+        line-height: 0.94;
+        letter-spacing: -0.075em;
+      }
+
+      .text-stack p,
+      .final-cta p:not(.section-kicker),
+      .stack-intro p,
+      .course-feature p {
+        font-size: 17px;
+        line-height: 1.45;
+      }
+
+      .section-top {
+        display: block;
+        margin-bottom: 22px;
+      }
+
+      .section-top h2 {
+        margin-top: 18px;
+      }
+
+      .signal-card,
+      .principle-card,
+      .process-step,
+      .work-card,
+      .course-card {
+        min-height: auto;
+        padding: 22px;
+        border-radius: 28px;
+      }
+
+      .signal-card h2,
+      .signal-card h3,
+      .principle-card h3,
+      .process-step h3,
+      .work-card h3,
+      .course-card h3 {
+        margin-top: 46px;
+      }
+
+      .principle-card.wide {
+        grid-column: auto;
+      }
+
+      .service-row {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        border-radius: 28px;
+      }
+
+      .service-row a {
+        justify-self: start;
+      }
+
+      .work-card {
+        min-height: auto;
+      }
+
+      .case-list {
+        gap: 8px;
+      }
+
+      .education-card,
+      .course-feature,
+      .stack-intro,
+      .stack-panel,
+      .final-cta {
+        padding: 24px;
+        border-radius: 32px;
+      }
+
+      .course-feature {
+        min-height: auto;
+        position: relative;
+        top: auto;
+      }
+
+      .course-stack,
+      .stack-tags {
+        gap: 7px;
+      }
+
+      .course-stack span,
+      .stack-tags span {
+        min-height: 34px;
+        font-size: 13px;
+      }
+
+      .stack-panel {
+        padding: 14px;
+      }
+
+      .stack-group {
+        padding: 18px;
+        border-radius: 24px;
+      }
+
+      .contact-option {
+        min-height: auto;
+      }
+
+      .footer {
+        padding-top: 24px;
+        padding-bottom: 34px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .ribbon-layer {
+        opacity: 0.45;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .site-header {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      .mobile-nav {
+        top: 62px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .hero,
+      .section,
+      .footer {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 13.6vw, 52px);
+        letter-spacing: -0.078em;
+      }
+
+      .hero-lead {
+        font-size: 16px;
+      }
+
+      .photo-card {
+        border-radius: 28px;
+      }
+
+      .photo-card img {
+        height: clamp(310px, 92vw, 420px);
+        border-radius: 20px;
+      }
+
+      .floating-note {
+        display: none;
+      }
+
+      .section {
+        padding-top: 62px;
+        padding-bottom: 62px;
+      }
+
+      .split h2,
+      .section-top h2,
+      .education-card h2,
+      .final-cta h2,
+      .stack-intro h2,
+      .course-feature h2 {
+        font-size: clamp(34px, 12vw, 44px);
+      }
+
+      .signal-card,
+      .principle-card,
+      .process-step,
+      .work-card,
+      .course-card,
+      .education-card,
+      .course-feature,
+      .stack-intro,
+      .final-cta {
+        padding: 20px;
+        border-radius: 26px;
+      }
+
+      .work-meta,
+      .course-card .course-meta {
+        flex-direction: column;
+      }
+
+      .case-status {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .header-cta {
+        padding: 0 11px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .button {
+        min-height: 50px;
+      }
+
+      .photo-card img {
+        height: 300px;
+      }
+    }
+
+
     @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
@@ -1447,6 +1909,15 @@
       Telegram
     </a>
   </header>
+
+  <nav class="mobile-nav" aria-label="Мобильная навигация">
+    <a href="#manifest">манифест</a>
+    <a href="#process">процесс</a>
+    <a href="#work">проекты</a>
+    <a href="#ai-track">знания</a>
+    <a href="#stack">стек</a>
+    <a href="#contact">контакт</a>
+  </nav>
 
   <main id="top">
     <section class="hero">
