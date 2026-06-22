@@ -1382,99 +1382,6 @@
     }
 
 
-
-    .usecase-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .usecase-card {
-      min-height: 390px;
-      padding: 24px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.74);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.22s ease, background 0.22s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .usecase-card::before {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      right: -84px;
-      top: -84px;
-      border-radius: 999px;
-      background: rgba(7, 92, 255, 0.10);
-      transition: transform 0.25s ease;
-    }
-
-    .usecase-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.93);
-    }
-
-    .usecase-card:hover::before {
-      transform: scale(1.25);
-    }
-
-    .usecase-card > span {
-      color: var(--accent);
-      font-size: 14px;
-      font-weight: 850;
-      letter-spacing: -0.02em;
-      position: relative;
-      z-index: 1;
-    }
-
-    .usecase-card h3 {
-      margin: 58px 0 14px;
-      font-size: 30px;
-      line-height: 0.98;
-      letter-spacing: -0.065em;
-      position: relative;
-      z-index: 1;
-    }
-
-    .usecase-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.42;
-      position: relative;
-      z-index: 1;
-    }
-
-    .usecase-card ul {
-      margin: auto 0 0;
-      padding: 18px 0 0;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .usecase-card li {
-      min-height: 34px;
-      padding: 0 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(245, 243, 238, 0.9);
-      display: inline-flex;
-      align-items: center;
-      color: var(--ink);
-      font-size: 13px;
-    }
-
-
     /* =========================
        FINAL MOBILE RESPONSIVE PATCH
        ========================= */
@@ -1938,6 +1845,109 @@
     }
 
 
+
+    .usecase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .usecase-card {
+      min-height: 410px;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s ease, background 0.22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .usecase-card::before {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -90px;
+      top: -90px;
+      border-radius: 999px;
+      background: rgba(7, 92, 255, 0.10);
+      transition: transform 0.25s ease;
+    }
+
+    .usecase-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.94);
+    }
+
+    .usecase-card:hover::before {
+      transform: scale(1.28);
+    }
+
+    .usecase-card > span {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .usecase-card h3 {
+      margin: 58px 0 14px;
+      font-size: 30px;
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .usecase-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.42;
+      position: relative;
+      z-index: 1;
+    }
+
+    .usecase-card ul {
+      margin: auto 0 0;
+      padding: 18px 0 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .usecase-card li {
+      min-height: 34px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(245, 243, 238, 0.9);
+      display: inline-flex;
+      align-items: center;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .usecase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .usecase-card {
+        min-height: auto;
+      }
+    }
+
+
     @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
@@ -2237,36 +2247,93 @@
 
     <section class="section services" id="services">
       <div class="section-top reveal">
-        <div class="section-kicker">что могу сделать</div>
-        <h2>Направления</h2>
+        <div class="section-kicker">где я могу быть полезен</div>
+        <h2>Не просто “делаю сайты”. Помогаю людям запускать, упаковывать и усиливать идеи через AI</h2>
       </div>
 
-      <div class="service-list">
-        <article class="service-row reveal">
-          <div class="service-index">01</div>
-          <div>
-            <h3>Лендинг или сайт-визитка</h3>
-            <p>Чистая страница, понятная структура, сильный первый экран, адаптив, анимации и CTA.</p>
-          </div>
-          <a href="#contact">обсудить</a>
+      <div class="usecase-grid">
+        <article class="usecase-card reveal">
+          <span>01 · фаундерам</span>
+          <h3>Проверить идею до того, как в неё уйдут месяцы</h3>
+          <p>
+            Помогаю быстро превратить сырую задумку в понятный оффер, первый экран,
+            MVP-структуру, пользовательский путь и версию, которую можно показать реальным людям.
+          </p>
+          <ul>
+            <li>product hypothesis</li>
+            <li>MVP scope</li>
+            <li>landing structure</li>
+          </ul>
         </article>
 
-        <article class="service-row reveal">
-          <div class="service-index">02</div>
-          <div>
-            <h3>MVP продукта</h3>
-            <p>Быстро собрать первую рабочую версию, чтобы проверить идею не в голове, а на реальных людях.</p>
-          </div>
-          <a href="#contact">обсудить</a>
+        <article class="usecase-card reveal">
+          <span>02 · экспертам и авторам</span>
+          <h3>Упаковать личный бренд без “инфоцыганского” вайба</h3>
+          <p>
+            Помогаю объяснить, кто ты, чем полезен, почему тебе можно доверять
+            и какое действие должен сделать человек после знакомства с тобой.
+          </p>
+          <ul>
+            <li>personal website</li>
+            <li>offer packaging</li>
+            <li>trust blocks</li>
+          </ul>
         </article>
 
-        <article class="service-row reveal">
-          <div class="service-index">03</div>
-          <div>
-            <h3>AI-автоматизация</h3>
-            <p>Боты, разборы, генерация, внутренние помощники, связки сервисов и простые AI-инструменты.</p>
-          </div>
-          <a href="#contact">обсудить</a>
+        <article class="usecase-card reveal">
+          <span>03 · малому бизнесу</span>
+          <h3>Найти, где AI реально экономит время</h3>
+          <p>
+            Не “прикрутить нейросеть ради хайпа”, а найти рутину, которую можно ускорить:
+            заявки, ответы, разборы, контент, внутренние помощники и простые инструменты.
+          </p>
+          <ul>
+            <li>AI assistant</li>
+            <li>workflow automation</li>
+            <li>content generation</li>
+          </ul>
+        </article>
+
+        <article class="usecase-card reveal">
+          <span>04 · продуктовым командам</span>
+          <h3>Понять, где продукт теряет людей</h3>
+          <p>
+            Смотрю на путь пользователя, оффер, онбординг, интерфейс и точки трения.
+            После этого остаётся не абстрактное “надо улучшить”, а список конкретных правок.
+          </p>
+          <ul>
+            <li>UX review</li>
+            <li>onboarding audit</li>
+            <li>AI feature ideas</li>
+          </ul>
+        </article>
+
+        <article class="usecase-card reveal">
+          <span>05 · маркетингу</span>
+          <h3>Собрать страницу, которая объясняет ценность</h3>
+          <p>
+            Помогаю выстроить лендинг не как набор красивых блоков, а как аргумент:
+            боль, решение, доверие, примеры, CTA и понятный следующий шаг.
+          </p>
+          <ul>
+            <li>landing page</li>
+            <li>copy structure</li>
+            <li>conversion logic</li>
+          </ul>
+        </article>
+
+        <article class="usecase-card reveal">
+          <span>06 · новым проектам</span>
+          <h3>Довести идею до первой публичной версии</h3>
+          <p>
+            Могу закрыть путь от “есть мысль в заметках” до первой версии:
+            структура, тексты, дизайн, AI-логика, простая реализация и план улучшений.
+          </p>
+          <ul>
+            <li>idea → prototype</li>
+            <li>prototype → beta</li>
+            <li>beta → feedback</li>
+          </ul>
         </article>
       </div>
     </section>
