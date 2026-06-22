@@ -1182,7 +1182,7 @@
       margin: 24px auto 0;
     }
 
-    .final-cta p:not(.section-kicker) {
+    .final-cta p:not(.editorial-label) {
       max-width: 660px;
       margin: 24px auto 0;
       color: var(--muted);
@@ -1632,7 +1632,7 @@
       }
 
       .text-stack p,
-      .final-cta p:not(.section-kicker),
+      .final-cta p:not(.editorial-label),
       .stack-intro p,
       .course-feature p {
         font-size: 17px;
@@ -1949,15 +1949,561 @@
 
 
 
-    /* remove pill-like badges requested by user */
-    .brand,
-    .eyebrow,
-    .status-row,
-    .final-check-badge,
-    .floating-note,
-    .section-kicker {
-      display: none !important;
+
+    /* =========================
+       PREMIUM REDESIGN PATCH
+       ========================= */
+
+    .editorial-label {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
+
+    .section-top .editorial-label {
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      max-width: 920px;
+      font-size: clamp(52px, 7.8vw, 108px);
+      line-height: 0.91;
+      letter-spacing: -0.09em;
+    }
+
+    .hero-lead {
+      max-width: 740px;
+      font-size: clamp(18px, 1.8vw, 21px);
+    }
+
+    .hero-proof div,
+    .premium-panel-card,
+    .signal-card,
+    .principle-card,
+    .process-step,
+    .education-card,
+    .course-card,
+    .course-feature,
+    .stack-intro,
+    .stack-panel,
+    .final-cta {
+      transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .hero-proof div:hover,
+    .premium-panel-card:hover,
+    .signal-card:hover,
+    .principle-card:hover,
+    .process-step:hover,
+    .education-card:hover,
+    .course-card:hover,
+    .stack-intro:hover,
+    .stack-panel:hover {
+      border-color: rgba(7, 92, 255, 0.24);
+      box-shadow: 0 34px 100px rgba(7, 92, 255, 0.10);
+    }
+
+    .usecase-bento {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .usecase-bento-card {
+      min-height: 330px;
+      padding: 25px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .usecase-bento-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -80px -90px auto;
+      width: 210px;
+      height: 210px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(7, 92, 255, 0.13), transparent 66%);
+      transition: transform 0.35s ease;
+    }
+
+    .usecase-bento-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.94);
+      border-color: rgba(7, 92, 255, 0.26);
+      box-shadow: 0 34px 100px rgba(7, 92, 255, 0.11);
+    }
+
+    .usecase-bento-card:hover::before {
+      transform: scale(1.22);
+    }
+
+    .usecase-bento-card.large {
+      grid-column: span 2;
+      grid-row: span 2;
+      min-height: 674px;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(7, 92, 255, 0.13), transparent 18rem),
+        radial-gradient(circle at 84% 16%, rgba(187, 255, 95, 0.42), transparent 17rem),
+        rgba(255, 255, 255, 0.78);
+    }
+
+    .usecase-bento-card.wide {
+      grid-column: span 2;
+    }
+
+    .usecase-topline {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .usecase-bento-card h3 {
+      margin: auto 0 14px;
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 0.96;
+      letter-spacing: -0.07em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .usecase-bento-card.large h3 {
+      font-size: clamp(42px, 5.2vw, 72px);
+    }
+
+    .usecase-bento-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.42;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mini-tags {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mini-tags span {
+      min-height: 34px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(245, 243, 238, 0.9);
+      display: inline-flex;
+      align-items: center;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .ba-card {
+      padding: 30px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .ba-card.after {
+      background:
+        radial-gradient(circle at 85% 12%, rgba(187, 255, 95, 0.42), transparent 17rem),
+        rgba(255, 255, 255, 0.78);
+    }
+
+    .ba-card h3 {
+      margin: 0 0 20px;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 0.95;
+      letter-spacing: -0.08em;
+    }
+
+    .ba-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .ba-card li {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      line-height: 1.42;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 14px;
+    }
+
+    .proof-card {
+      min-height: 520px;
+      padding: 26px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .proof-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.94);
+      border-color: rgba(7, 92, 255, 0.26);
+      box-shadow: 0 34px 100px rgba(7, 92, 255, 0.11);
+    }
+
+    .proof-card-large {
+      grid-row: span 2;
+      min-height: 760px;
+    }
+
+    .proof-card h3 {
+      margin: auto 0 12px;
+      font-size: clamp(30px, 4vw, 56px);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+    }
+
+    .proof-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.42;
+    }
+
+    .proof-list {
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 9px;
+    }
+
+    .proof-list li {
+      padding-top: 9px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .proof-ui,
+    .phone-mock,
+    .planner-mock {
+      margin-bottom: 28px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 80% 12%, rgba(7, 92, 255, 0.12), transparent 15rem),
+        rgba(245, 243, 238, 0.86);
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .proof-ui {
+      min-height: 320px;
+      padding: 16px;
+    }
+
+    .browser-bar {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+
+    .browser-bar span {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(16, 16, 16, 0.22);
+    }
+
+    .browser-bar strong {
+      margin-left: 8px;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .mock-analysis {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .mock-analysis div {
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid var(--line);
+    }
+
+    .mock-analysis small {
+      color: var(--accent);
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .mock-analysis p {
+      margin-top: 8px;
+      color: var(--ink);
+    }
+
+    .phone-mock {
+      min-height: 260px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .phone-top {
+      width: 72px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(16, 16, 16, 0.18);
+      margin: 0 auto 36px;
+    }
+
+    .phone-content {
+      margin-top: auto;
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid var(--line);
+    }
+
+    .phone-content span {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .phone-content strong {
+      display: block;
+      margin-top: 10px;
+      font-size: 30px;
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+
+    .phone-content p {
+      margin-top: 10px;
+    }
+
+    .planner-mock {
+      min-height: 260px;
+      padding: 22px;
+      display: grid;
+      align-content: end;
+      gap: 12px;
+    }
+
+    .planner-line {
+      height: 16px;
+      width: 82%;
+      border-radius: 999px;
+      background: rgba(16, 16, 16, 0.10);
+    }
+
+    .planner-line.strong {
+      width: 58%;
+      background: rgba(7, 92, 255, 0.38);
+    }
+
+    .planner-line.short {
+      width: 42%;
+    }
+
+    .planner-block {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 850;
+      letter-spacing: -0.03em;
+    }
+
+    .anti-agency-card {
+      padding: 42px;
+      border-radius: 56px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background:
+        radial-gradient(circle at 15% 12%, rgba(7, 92, 255, 0.12), transparent 18rem),
+        radial-gradient(circle at 80% 8%, rgba(187, 255, 95, 0.44), transparent 18rem),
+        rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(18px);
+    }
+
+    .anti-agency-card h2 {
+      max-width: 900px;
+      margin: 0 0 28px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: 0.91;
+      letter-spacing: -0.085em;
+    }
+
+    .anti-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .anti-grid p {
+      margin: 0;
+      min-height: 150px;
+      padding: 18px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.66);
+      display: flex;
+      align-items: end;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .cta-send-list {
+      max-width: 780px;
+      margin: 26px auto 0;
+      padding: 18px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.62);
+      text-align: left;
+    }
+
+    .cta-send-list span {
+      display: block;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .cta-send-list p {
+      margin: 8px 0 0 !important;
+      color: var(--muted) !important;
+      font-size: 16px !important;
+      max-width: none !important;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(7, 92, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 92, 255, 0.035) 1px, transparent 1px);
+      background-size: 120px 120px;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 16%, transparent 82%);
+      z-index: -1;
+    }
+
+    @media (max-width: 980px) {
+      .usecase-bento,
+      .before-after-grid,
+      .proof-grid,
+      .anti-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .usecase-bento-card.large,
+      .usecase-bento-card.wide {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: auto;
+      }
+
+      .usecase-bento-card,
+      .proof-card,
+      .proof-card-large,
+      .ba-card {
+        min-height: auto;
+      }
+
+      .proof-card-large {
+        grid-row: auto;
+      }
+
+      .anti-grid p {
+        min-height: 120px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .editorial-label {
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 12vw, 56px);
+      }
+
+      .usecase-bento-card,
+      .proof-card,
+      .ba-card,
+      .anti-agency-card {
+        padding: 22px;
+        border-radius: 30px;
+      }
+
+      .usecase-bento-card h3,
+      .proof-card h3 {
+        font-size: 32px;
+      }
+
+      .usecase-bento-card.large h3 {
+        font-size: 40px;
+      }
+
+      .anti-agency-card h2 {
+        font-size: 42px;
+      }
+
+      .proof-ui,
+      .phone-mock,
+      .planner-mock {
+        min-height: auto;
+      }
+    }
+
 
     @media (prefers-reduced-motion: reduce) {
       *,
@@ -2155,7 +2701,7 @@
     </section>
 
     <section class="section manifesto reveal" id="manifest">
-      <div class="section-kicker">манифест</div>
+      <div class="editorial-label">манифест</div>
       <div class="split">
         <h2>В 2026 году выигрывает не тот, кто дольше готовится. Выигрывает тот, кто быстрее проверяет.</h2>
         <div class="text-stack">
@@ -2171,9 +2717,41 @@
       </div>
     </section>
 
-    <section class="section principles">
+        <section class="section before-after" id="outcome">
       <div class="section-top reveal">
-        <div class="section-kicker">принципы</div>
+        <div class="editorial-label">02 / transformation</div>
+        <h2>С чем приходят и что получают на выходе</h2>
+      </div>
+
+      <div class="before-after-grid">
+        <article class="ba-card before reveal">
+          <h3>Приходят с хаосом</h3>
+          <ul>
+            <li>идея лежит в заметках, но непонятно, с чего начать;</li>
+            <li>оффер звучит размыто и не цепляет;</li>
+            <li>хочется “AI-фичу”, но непонятно, где от неё польза;</li>
+            <li>есть продукт, но люди не понимают ценность;</li>
+            <li>слишком много вариантов и нет первого шага.</li>
+          </ul>
+        </article>
+
+        <article class="ba-card after reveal">
+          <h3>Получают систему</h3>
+          <ul>
+            <li>понятный первый экран и сильный оффер;</li>
+            <li>структуру MVP без лишних функций;</li>
+            <li>AI-логику там, где она реально усиливает продукт;</li>
+            <li>лендинг или прототип, который можно показать людям;</li>
+            <li>список следующих шагов после первого фидбека.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+
+<section class="section principles">
+      <div class="section-top reveal">
+        <div class="editorial-label">принципы</div>
         <h2>Как я работаю</h2>
       </div>
 
@@ -2213,7 +2791,7 @@
 
     <section class="section process" id="process">
       <div class="section-top reveal">
-        <div class="section-kicker">процесс</div>
+        <div class="editorial-label">процесс</div>
         <h2>От идеи до первой живой версии</h2>
       </div>
 
@@ -2258,93 +2836,89 @@
 
     <section class="section services" id="services">
       <div class="section-top reveal">
-        <div class="section-kicker">где я могу быть полезен</div>
+        <div class="editorial-label">03 / где я полезен</div>
         <h2>Не просто “делаю сайты”. Помогаю людям запускать, упаковывать и усиливать идеи через AI</h2>
       </div>
 
-      <div class="usecase-grid">
-        <article class="usecase-card reveal">
-          <span>01 · фаундерам</span>
+      <div class="usecase-bento">
+        <article class="usecase-bento-card large reveal">
+          <div class="usecase-topline">фаундерам · MVP · проверка гипотез</div>
           <h3>Проверить идею до того, как в неё уйдут месяцы</h3>
           <p>
             Помогаю быстро превратить сырую задумку в понятный оффер, первый экран,
             MVP-структуру, пользовательский путь и версию, которую можно показать реальным людям.
           </p>
-          <ul>
-            <li>product hypothesis</li>
-            <li>MVP scope</li>
-            <li>landing structure</li>
-          </ul>
+          <div class="mini-tags">
+            <span>product hypothesis</span>
+            <span>MVP scope</span>
+            <span>landing structure</span>
+          </div>
         </article>
 
-        <article class="usecase-card reveal">
-          <span>02 · экспертам и авторам</span>
-          <h3>Упаковать личный бренд без “инфоцыганского” вайба</h3>
+        <article class="usecase-bento-card reveal">
+          <div class="usecase-topline">экспертам · авторам</div>
+          <h3>Упаковать личный бренд без инфоцыганского вайба</h3>
           <p>
             Помогаю объяснить, кто ты, чем полезен, почему тебе можно доверять
             и какое действие должен сделать человек после знакомства с тобой.
           </p>
-          <ul>
-            <li>personal website</li>
-            <li>offer packaging</li>
-            <li>trust blocks</li>
-          </ul>
+          <div class="mini-tags">
+            <span>personal website</span>
+            <span>trust blocks</span>
+          </div>
         </article>
 
-        <article class="usecase-card reveal">
-          <span>03 · малому бизнесу</span>
+        <article class="usecase-bento-card reveal">
+          <div class="usecase-topline">малому бизнесу</div>
           <h3>Найти, где AI реально экономит время</h3>
           <p>
             Не “прикрутить нейросеть ради хайпа”, а найти рутину, которую можно ускорить:
-            заявки, ответы, разборы, контент, внутренние помощники и простые инструменты.
+            заявки, ответы, разборы, контент и внутренние помощники.
           </p>
-          <ul>
-            <li>AI assistant</li>
-            <li>workflow automation</li>
-            <li>content generation</li>
-          </ul>
+          <div class="mini-tags">
+            <span>AI assistant</span>
+            <span>workflow automation</span>
+          </div>
         </article>
 
-        <article class="usecase-card reveal">
-          <span>04 · продуктовым командам</span>
+        <article class="usecase-bento-card reveal">
+          <div class="usecase-topline">продуктовым командам</div>
           <h3>Понять, где продукт теряет людей</h3>
           <p>
             Смотрю на путь пользователя, оффер, онбординг, интерфейс и точки трения.
-            После этого остаётся не абстрактное “надо улучшить”, а список конкретных правок.
+            На выходе — список конкретных правок, а не абстрактное “надо улучшить”.
           </p>
-          <ul>
-            <li>UX review</li>
-            <li>onboarding audit</li>
-            <li>AI feature ideas</li>
-          </ul>
+          <div class="mini-tags">
+            <span>UX review</span>
+            <span>onboarding audit</span>
+          </div>
         </article>
 
-        <article class="usecase-card reveal">
-          <span>05 · маркетингу</span>
+        <article class="usecase-bento-card reveal">
+          <div class="usecase-topline">маркетингу</div>
           <h3>Собрать страницу, которая объясняет ценность</h3>
           <p>
-            Помогаю выстроить лендинг не как набор красивых блоков, а как аргумент:
+            Лендинг не как набор красивых блоков, а как аргумент:
             боль, решение, доверие, примеры, CTA и понятный следующий шаг.
           </p>
-          <ul>
-            <li>landing page</li>
-            <li>copy structure</li>
-            <li>conversion logic</li>
-          </ul>
+          <div class="mini-tags">
+            <span>copy structure</span>
+            <span>conversion logic</span>
+          </div>
         </article>
 
-        <article class="usecase-card reveal">
-          <span>06 · новым проектам</span>
+        <article class="usecase-bento-card wide reveal">
+          <div class="usecase-topline">новым проектам</div>
           <h3>Довести идею до первой публичной версии</h3>
           <p>
             Могу закрыть путь от “есть мысль в заметках” до первой версии:
             структура, тексты, дизайн, AI-логика, простая реализация и план улучшений.
           </p>
-          <ul>
-            <li>idea → prototype</li>
-            <li>prototype → beta</li>
-            <li>beta → feedback</li>
-          </ul>
+          <div class="mini-tags">
+            <span>idea → prototype</span>
+            <span>prototype → beta</span>
+            <span>beta → feedback</span>
+          </div>
         </article>
       </div>
     </section>
@@ -2352,66 +2926,87 @@
 
     <section class="section work" id="work">
       <div class="section-top reveal">
-        <div class="section-kicker">проекты</div>
-        <h2>Не просто названия, а продуктовые кейсы</h2>
+        <div class="editorial-label">04 / proof</div>
+        <h2>Проекты как доказательство подхода</h2>
       </div>
 
-      <div class="work-grid">
-        <article class="work-card reveal">
-          <div class="work-meta">
-            <span>AI review</span>
-            <span>RoastMyApp</span>
+      <div class="proof-grid">
+        <article class="proof-card proof-card-large reveal">
+          <div class="proof-ui">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+              <strong>RoastMyApp</strong>
+            </div>
+            <div class="mock-analysis">
+              <div>
+                <small>input</small>
+                <p>приложение / лендинг / идея</p>
+              </div>
+              <div>
+                <small>AI review</small>
+                <p>UX · offer · copy · positioning</p>
+              </div>
+              <div>
+                <small>output</small>
+                <p>список конкретных улучшений</p>
+              </div>
+            </div>
           </div>
-          <h3>Разбор приложений через AI</h3>
-          <p>Сервис, который смотрит на продукт и помогает понять, где он слабый: UX, оффер, тексты, позиционирование и запуск.</p>
-
-          <ul class="case-list">
-            <li><strong>Задача:</strong> быстро дать фаундеру честный разбор без дорогого консультанта.</li>
-            <li><strong>Что внутри:</strong> анализ, уточнения, версии проекта, закрытый доступ по ключам.</li>
-            <li><strong>Польза:</strong> человек получает не “мнение”, а список конкретных улучшений.</li>
+          <h3>RoastMyApp — AI-разбор продуктов</h3>
+          <p>
+            Сервис, который помогает быстро увидеть слабые места приложения:
+            UX, оффер, тексты, позиционирование и запуск.
+          </p>
+          <ul class="proof-list">
+            <li>closed beta по invite keys</li>
+            <li>упаковка продукта и пользовательского сценария</li>
+            <li>первый коммерческий интерес / первая продажа</li>
           </ul>
-
-          <div class="case-status">closed beta / invite keys</div>
         </article>
 
-        <article class="work-card reveal">
-          <div class="work-meta">
-            <span>habits</span>
-            <span>StreakTogether</span>
+        <article class="proof-card reveal">
+          <div class="phone-mock">
+            <div class="phone-top"></div>
+            <div class="phone-content">
+              <span>tribe ritual</span>
+              <strong>StreakTogether</strong>
+              <p>habits · tribes · social accountability</p>
+            </div>
           </div>
-          <h3>Привычки через племя</h3>
-          <p>Мобильное приложение про совместную дисциплину, ритуалы, племена и ощущение, что ты не один тянешь свою жизнь.</p>
-
-          <ul class="case-list">
-            <li><strong>Задача:</strong> сделать привычки не одиноким трекером, а социальным ритуалом.</li>
-            <li><strong>Что внутри:</strong> племена, общие стрики, ритуалы, награды, инвентарь и магазин.</li>
-            <li><strong>Польза:</strong> дисциплина держится не только на мотивации, но и на связи с людьми.</li>
+          <h3>StreakTogether</h3>
+          <p>
+            Habit-продукт про племена, ритуалы, общий прогресс и дисциплину через связь с людьми.
+          </p>
+          <ul class="proof-list">
+            <li>mobile-first логика</li>
+            <li>ритуалы, стрики, награды</li>
+            <li>социальный слой вместо одиночного трекера</li>
           </ul>
-
-          <div class="case-status">mobile app / in progress</div>
         </article>
 
-        <article class="work-card reveal">
-          <div class="work-meta">
-            <span>planning</span>
-            <span>DayPilot</span>
+        <article class="proof-card reveal">
+          <div class="planner-mock">
+            <div class="planner-line strong"></div>
+            <div class="planner-line"></div>
+            <div class="planner-line short"></div>
+            <div class="planner-block">AI plan → realistic day</div>
           </div>
-          <h3>AI-планировщик дня</h3>
-          <p>Инструмент, который помогает разложить хаос по времени, собрать день и сделать план более реалистичным.</p>
-
-          <ul class="case-list">
-            <li><strong>Задача:</strong> превратить список задач в понятный день, который реально можно выполнить.</li>
-            <li><strong>Что внутри:</strong> AI-план, закрытие дня, история, настройки стиля планирования.</li>
-            <li><strong>Польза:</strong> меньше хаоса, меньше перегруза, больше понятных действий.</li>
+          <h3>DayPilot</h3>
+          <p>
+            AI-планировщик дня, который помогает разложить хаос в понятный и выполнимый план.
+          </p>
+          <ul class="proof-list">
+            <li>AI planner flow</li>
+            <li>закрытие дня и история</li>
+            <li>настройка стиля планирования</li>
           </ul>
-
-          <div class="case-status">AI planner / personal use</div>
         </article>
       </div>
     </section>
 
+
     <section class="section education reveal" id="education">
-      <div class="section-kicker">образование и база</div>
+      <div class="editorial-label">образование и база</div>
 
       <div class="education-card">
         <h2>Учился в ИТМО и проходил курсы University of Helsinki.</h2>
@@ -2435,7 +3030,7 @@
     <section class="section ai-track" id="ai-track">
       <div class="course-layout">
         <aside class="course-feature reveal">
-          <div class="section-kicker">мои знания</div>
+          <div class="editorial-label">мои знания</div>
           <h2>AI engineering база, которую я уже прошёл и применяю в продуктах.</h2>
           <p>
             Это не просто список красивых слов. Моя база закрывает путь от понимания ML-принципов
@@ -2557,7 +3152,7 @@
     <section class="section stack" id="stack">
       <div class="stack-grid">
         <div class="stack-intro reveal">
-          <div class="section-kicker">стек и подход</div>
+          <div class="editorial-label">стек и подход</div>
           <h2>Собираю не “красивую картинку”, а понятный продуктовый слой.</h2>
           <p>
             Для сайта-визитки этого часто не хватает: показать не только визуал,
@@ -2616,11 +3211,25 @@
       </div>
     </section>
 
-    <section class="section final-cta reveal" id="contact">
-      <p class="section-kicker">контакт</p>
-      <h2>Есть идея? Давай быстро поймём, можно ли из неё собрать живой продукт.</h2>
+        <section class="section anti-agency" id="anti-agency">
+      <div class="anti-agency-card reveal">
+        <div class="editorial-label">09 / без агентского цирка</div>
+        <h2>Я не продаю процесс ради процесса</h2>
+        <div class="anti-grid">
+          <p>не растягиваю первый запуск на месяцы</p>
+          <p>не начинаю с огромного ТЗ</p>
+          <p>не добавляю AI туда, где он не нужен</p>
+          <p>не делаю дизайн без продуктового смысла</p>
+        </div>
+      </div>
+    </section>
+
+
+<section class="section final-cta reveal" id="contact">
+      <p class="editorial-label">контакт</p>
+      <h2>Есть идея, которую хочется проверить?</h2>
       <p>
-        Напиши мне в Telegram. Можно без ТЗ и красивой презентации — просто опиши задачу обычными словами.
+        Напиши 2–3 предложения: что хочешь запустить, где сейчас затык и какой результат нужен. Я помогу понять, что из этого можно собрать первым.
       </p>
 
       <div class="contact-options">
@@ -2636,6 +3245,11 @@
           <strong>AI → польза</strong>
           <span>Подумаем, где AI реально усиливает продукт, а где он просто лишний шум.</span>
         </div>
+      </div>
+
+      <div class="cta-send-list">
+        <span>можно прислать:</span>
+        <p>идею продукта · ссылку на сайт · скрин приложения · описание бизнеса · процесс, который хочется автоматизировать</p>
       </div>
 
       <div class="final-actions">
